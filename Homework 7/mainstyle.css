@@ -1,0 +1,20 @@
+span{
+    color:white;
+    background-color:green;
+}
+
+span.blacktext {
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+}
+
+#specificlink {
+    color:red;
+    font-family: arial;
+    font-size: 20px;
+}
+
+body {
+    background-image: url("view-space-spiral-galaxy-stars-260nw-2477586027.png");
+}
