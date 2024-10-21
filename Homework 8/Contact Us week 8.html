@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <link rel="stylesheet" href="bootstrap-5.3.3-dist\css\bootstrap.min.css">
+        <script src="./styles/bootstrap-5.3.3/js/jquery-3.7.1.js"></script>
+        <script src="./styles/bootstrap-5.3.3/js/bootstrap.min.js"></script>
+        <script>
+            function checkboxes()
+            {
+               var firstname = document.getElementById("fname").value;
+               if(firstname == "")
+                    {
+                        document.getElementById("fname").style.backgroundColor = "red";
+                        document.getElementById("fname").focus();
+                    } else {
+                        document.getElementById("fname").style.backgroundColor = "white";
+                        document.getElementById("fname").focus();
+                    }
+                var lastname = document.getElementById("lname").value;
+                if(lastname == "")
+                    {
+                        document.getElementById("lname").style.backgroundColor = "red";
+                        document.getElementById("lname").focus();
+                    } else {
+                        document.getElementById("lname").style.backgroundColor = "white";
+                        document.getElementById("lname").focus();
+                    }
+               var emailaddress = document.getElementById("eaddress").value;
+                if(emailaddress =="")
+                    {
+                        document.getElementById("eaddress").style.backgroundColor = "red";
+                        document.getElementById("eaddress").focus();
+                    } else {
+                    document.getElementById("eaddress").style.backgroundColor = "white";
+                    document.getElementById("eaddress").focus();
+                    }
+                var termsofservice = document.getElementById("no").value;
+                if(termsofservice = true)
+                    {
+                        window.alert("You need to accept the terms of service, goober.");
+                    } else {
+                        window.alert("Great! The terms are accepted!");
+                    }
+            }
+        </script>
+    </head>
+    <body>
+        <h1><span>Contact Us</span></h1>
+        <form action="">
+            <p> First Name: <input type="text" id="fname"></p>
+            <p> Last Name: <input type="text" id="lname"></p>
+            <p> Email Address: <input type="text" id="eaddress"></p>
+            <h2><span>Do you accept the terms and conditions of not being a complete goober?</span></h2>
+            <select>
+                <option id="no">No</option>
+                <option id="yes">Yes</option>
+            </select>
+            <button type="button" class="btn btn-success" onclick='checkboxes();'>Submit My Info</button>
+            
+        </form>
+    </br>
+    <a href="homepage.html" target=" _new">Go Home</a>
+    </br>
+    <a href="shortstory.html" target=" _new">Check out my creative works!</a>
+    </body>
+</html>
