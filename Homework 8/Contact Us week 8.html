@@ -8,15 +8,6 @@
         <script>
             function checkboxes()
             {
-               var firstname = document.getElementById("fname").value;
-               if(firstname == "")
-                    {
-                        document.getElementById("fname").style.backgroundColor = "red";
-                        document.getElementById("fname").focus();
-                    } else {
-                        document.getElementById("fname").style.backgroundColor = "white";
-                        document.getElementById("fname").focus();
-                    }
                 var lastname = document.getElementById("lname").value;
                 if(lastname == "")
                     {
@@ -24,7 +15,7 @@
                         document.getElementById("lname").focus();
                     } else {
                         document.getElementById("lname").style.backgroundColor = "white";
-                        document.getElementById("lname").focus();
+                        
                     }
                var emailaddress = document.getElementById("eaddress").value;
                 if(emailaddress =="")
@@ -33,15 +24,27 @@
                         document.getElementById("eaddress").focus();
                     } else {
                     document.getElementById("eaddress").style.backgroundColor = "white";
-                    document.getElementById("eaddress").focus();
+                   
                     }
-                var termsofservice = document.getElementById("no").value;
-                if(termsofservice = true)
+                var firstname = document.getElementById("fname").value;
+                if(firstname == "")
                     {
-                        window.alert("You need to accept the terms of service, goober.");
+                        document.getElementById("fname").style.backgroundColor = "red";
+                        document.getElementById("fname").focus();
                     } else {
-                        window.alert("Great! The terms are accepted!");
+                        document.getElementById("fname").style.backgroundColor = "white";
+                        
                     }
+                var termsandconditionstrue = document.getElementById("accept");
+                if (termsandconditionstrue.checked == true)
+                    {
+                        window.alert("Thank you for accepting terms of conditions!")
+                    }  else {
+                        window.alert("You need to accept the terms and conditions! You absolute goober!")
+                    }
+                    
+                   
+                    
             }
         </script>
     </head>
@@ -52,16 +55,15 @@
             <p> Last Name: <input type="text" id="lname"></p>
             <p> Email Address: <input type="text" id="eaddress"></p>
             <h2><span>Do you accept the terms and conditions of not being a complete goober?</span></h2>
-            <select>
-                <option id="no">No</option>
-                <option id="yes">Yes</option>
+                <label for="accept">Checkbox:</label>
+                <input type="checkbox" id="accept" onclick="checkboxes()"></br>
             </select>
             <button type="button" class="btn btn-success" onclick='checkboxes();'>Submit My Info</button>
             
         </form>
     </br>
-    <a href="homepage.html" target=" _new">Go Home</a>
+    <a href="homepage week 8.html" target=" _new">Go Home</a>
     </br>
-    <a href="shortstory.html" target=" _new">Check out my creative works!</a>
+    <a href="shortstory week 8.html" target=" _new">Check out my creative works!</a>
     </body>
 </html>
